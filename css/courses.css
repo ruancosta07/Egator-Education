@@ -1,0 +1,31 @@
+.curso-card {
+    background-color: rgb(40, 43, 89);
+}
+
+.curso-card .curso-text {
+    display: grid;
+    gap: 10px;
+    padding: 0px 10px 10px 10px;
+}
+
+.curso-text button {
+    font-size: .8rem;
+}
+
+.curso-card h3 {
+    font-size: 1.3rem;
+    line-height: 27px;
+}
+
+@media (min-width:768px) {
+
+    main {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1024px) {
+    main {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}

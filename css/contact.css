@@ -1,0 +1,177 @@
+main.padding {
+    padding: 10px;
+}
+
+#contact {
+    display: grid;
+    gap: 20px;
+    background: linear-gradient(rgb(80, 86, 255), rgb(109, 96, 241));
+    padding: 10px 20px;
+    border-radius: 10px;
+}
+
+#contact>img {
+    max-width: 50%;
+}
+
+#contact .phone,
+.mail,
+.map {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+#contact div img {
+    height: 30px;
+}
+
+#contact a:is(:active, :hover){
+    color: rgb(145, 135, 255)
+}
+
+#contact .links img {
+    background-color: rgb(55, 60, 116);
+    padding: 5px;
+    border-radius: 10px;
+    height: 25px;
+}
+
+#contact .links img:is(:active, :hover){
+    background-color: rgb(31, 37, 61);
+}
+
+main #formulario {
+    padding: 20px;
+    border-radius: 10px;
+    background-color: rgb(45, 48, 99);
+}
+
+main #formulario form {
+    display: grid;
+    gap: 15px;
+    max-width: 100%;
+}
+
+#formulario form div input {
+    border: none;
+    outline: 0;
+    font-family: 'DM Sans';
+    font-size: 1rem;
+    padding: 10px;
+    background-color: rgb(31, 37, 61);
+    width: 100%;
+    box-sizing: border-box;
+}
+
+#formulario div textarea {
+    resize: vertical;
+    width: 100%;
+    max-height: 100%;
+    min-height: 50px;
+    outline: 0;
+    font-family: 'DM Sans';
+    background-color: rgb(31, 37, 61);
+    font-size: 1rem;
+    border: none;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+#formulario form div input:focus {
+    outline: 2px solid rgb(109, 96, 241);
+}
+
+#formulario form div textarea:focus {
+    outline: 2px solid rgb(109, 96, 241);
+}
+
+#formulario form button {
+    width: fit-content;
+    background-color: rgb(109, 96, 241);
+    font-size: 1rem;
+    padding: 5px 10px;
+    border-radius: 3px;
+    letter-spacing: .5px;
+    font-weight: 500;
+}
+
+@media (min-width:1024px) {
+
+    main.padding {
+        padding: 30px 60px;
+    }
+
+    main {
+        height: 75vh;
+        position: relative;
+    }
+
+    main #contact {
+        position: absolute;
+        max-width: 300px;
+        z-index: 1;
+        left: 10vw;
+        bottom: 50%;
+        transform: translateY(50%);
+    }
+
+    main #formulario {
+        padding: 30px 60px;
+        grid-column: 1 / -1;
+        width: 90%;
+        height: auto;
+        position: relative;
+        margin: auto;
+    }
+
+    main #formulario form {
+        grid-template-columns: repeat(2, 1fr);
+        margin-left: auto;
+        width: 50%;
+        height: auto;
+    }
+
+    #formulario form .email-adress {
+        grid-column: 1 / -1;
+    }
+
+    #formulario form .message {
+        grid-column: 1 / -1;
+        height: 30vh;
+    }
+
+}
+
+@media (min-width:1400px) {
+
+    main{
+        position: relative;
+        height: 70vh;
+    }
+
+    main #contact {
+        position: absolute;
+        width: 400px;
+        z-index: 1;
+        left: 23vw;
+        margin-right: 400px;
+        bottom: 50%;
+        transform: translateY(50%);
+    }
+
+    main #formulario {
+        padding: 30px 60px;
+        grid-column: 1 / -1;
+        width: 60%;
+        height: auto;
+        position: relative;
+    }
+
+    main #formulario form {
+        grid-template-columns: repeat(2, 1fr);
+        margin-left: auto;
+        width: 50%;
+        height: auto;
+    }
+}

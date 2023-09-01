@@ -1,0 +1,184 @@
+#grid-about {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+}
+
+.about-card img {
+    max-width: 20%;
+    padding: 8px;
+    border-radius: 50%;
+}
+
+.about-card {
+    display: grid;
+    gap: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: rgb(40, 43, 89);
+}
+
+.about-card:nth-child(1) img {
+    background-color: rgba(255, 50, 50, 1);
+}
+
+.about-card:nth-child(2) img {
+    background-color: rgba(0, 255, 102, 0.623);
+}
+
+.about-card:nth-child(3) img {
+    background-color: rgb(0, 100, 255);
+}
+
+#our-team {
+    display: grid;
+    gap: 20px;
+}
+
+#our-team h1 {
+    text-align: center;
+    font-size: 2rem;
+}
+
+#grid-team {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 30px;
+}
+
+#grid-team .card-tutor {
+    background-color: rgb(40, 43, 89);
+    text-align: center;
+    display: grid;
+    padding: 0px 0px 10px 0px;
+    gap: 10px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    width: fit-content;
+    margin: 0 auto;
+}
+
+.card-tutor h3 {
+    font-size: 1.5rem;
+}
+
+.card-tutor .tutor-pic {
+    overflow: hidden;
+    position: relative;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.card-tutor:is(:focus, :hover) .tutor-pic>img {
+    transform: scale(1.1);
+    filter: grayscale(0);
+}
+
+.card-tutor .tutor-pic img {
+    transition: .5s;
+    filter: grayscale(10);
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.card-tutor .tutor-links {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    padding: 10px;
+    gap: 5px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    flex-direction: column;
+    background-color: rgb(100, 0, 200);
+
+    transform: translateX(0px);
+    opacity: 1;
+
+    transition: .5s;
+}
+
+.tutor-links.tutor-links-active {
+    opacity: 0;
+    transform: translateX(60px);
+}
+
+.card-tutor .tutor-links img {
+    height: 35px;
+}
+
+@media (min-width:768px) {
+    .about-card img {
+        max-width: 15%;
+    }
+
+    .about-card h3 {
+        font-size: 2rem;
+    }
+
+    .about-card p {
+        font-size: 1.3rem;
+    }
+
+    #grid-team {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    #our-team h1 {
+        font-size: 2.5rem;
+    }
+}
+
+@media (min-width:1024px) {
+
+    main {
+        display: grid;
+        grid-template-columns: 1.5fr 1fr;
+    }
+
+    main #main-banner {
+        /* grid-column: 2; */
+        order: 2;
+    }
+
+    #main-text {
+        place-self: center start;
+    }
+
+    main #main-text h1 {
+        font-size: 2.5rem;
+    }
+
+    main #main-text p {
+        font-size: 1.2rem;
+        max-width: 45ch;
+    }
+
+    #grid-team {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    #grid-about {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .about-card img {
+        max-width: 10%;
+    }
+}
+
+@media (min-width: 1600px) {
+    main {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    main #main-text h1 {
+        font-size: 4rem;
+    }
+
+    #grid-team {
+        grid-template-columns: repeat(6, 1fr);
+    }
+}
