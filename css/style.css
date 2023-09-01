@@ -723,6 +723,10 @@ footer .contact .social-medias img:is(:active, :hover) {
 }
 
 @media (min-width: 1600px) {
+
+  header{
+    padding: 20px 100px;
+  }
   .padding {
     padding: 20px 100px;
   }
